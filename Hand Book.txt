@@ -1,0 +1,7 @@
+
+await page.getByRole('button', { name: 'Sign Up' }).click();
+
+await expect(locator).toHaveText('Saved Successfully');
+
+await expect(page).toHaveURL(/.*dashboard/);
+

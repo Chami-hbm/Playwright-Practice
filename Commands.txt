@@ -1,0 +1,12 @@
+npx playwright test
+
+See the browser window: add --headed.
+Run a single project/browser: --project=chromium.
+Run one file: npx playwright test tests/example.spec.ts.
+Open testing UI: --ui.
+
+npx playwright show-report
+
+npx playwright test --ui
+
+npx playwright test example.spec.ts

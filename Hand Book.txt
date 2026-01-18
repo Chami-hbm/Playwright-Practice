@@ -5,3 +5,17 @@ await expect(locator).toHaveText('Saved Successfully');
 
 await expect(page).toHaveURL(/.*dashboard/);
 
+npx playwright codegen playwright.dev
+npx playwright codegen https://your-website.com
+npx playwright codegen (Start without a URL and navigate manually)
+
+Environmental variable setup
+----------------------------
+// tests/login.spec.ts
+test('login with env variables', async ({ page }) => {
+  await page.goto(process.env.BASE_URL); // Uses the URL from .env
+  
+  await page.getByLabel('Password').fill(process.env.TEST_PASSWORD);
+  await page.getByRole('button', { name: 'Login' }).click();
+});
+

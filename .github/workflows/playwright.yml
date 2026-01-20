@@ -25,7 +25,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run tests
-      run: npx playwright test TestProject/Geminitest.spec.ts
+      run: npx playwright test myProject/tests/swag-labs.spec.ts
       env:
         # Syntax: PROCESS_ENV_NAME: ${{ secrets.GITHUB_SECRET_NAME }}
         TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
